@@ -1,0 +1,2752 @@
+/* ------------------------------------ >> basic << */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+@font-face {
+    font-family: vazir;
+    src: url('./../../../assets/fonts/Vazir.ttf');
+}
+
+@font-face {
+    font-family: vazirB;
+    src: url('./../../../assets/fonts/Vazir-Bold.ttf');
+}
+
+html, body {
+    font-family: vazir;
+}
+
+.float {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.stacklayer1 {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.stacklayer2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+
+.stacklayer3 {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+}
+
+.stacklayer4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: max-content;
+    height: max-content;
+    z-index: 4;
+}
+
+.backround {
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0A112B;
+    background-image: url('./../../../assets/image/stars.jpg');
+    background-size: cover;
+    animation: turn 100s linear infinite;
+    transform: scale(1);
+}
+
+@keyframes turn {
+    0% {
+        transform: scale(1);
+    }
+
+
+    50% {
+        transform: scale(1.5);
+    }
+
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* .shape {} */
+
+.stacklayerBody {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.maindiv {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 1;
+}
+
+/* ---------------- >> text and boxes  and icons << */
+
+/* ------------------- > text style */
+.hugeText {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.boldText {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.normalText {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.smallText {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------- > text style */
+
+/* ------------------- > icon style */
+#icon {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ------------------- > icon style */
+
+/* ------------------- > button style */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 8px 15px;
+    margin: 0px 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    transition: all 0.2s;
+}
+
+.btn:active {
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(0.95);
+}
+
+.smallAnimatedBtnInfo {
+    padding: 10px;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.smallAnimatedBtnInfo i {
+    transform: rotate(90deg);
+}
+
+/*  big animated btn  */
+.bigAnimatedBtn {
+    width: 40%;
+    height: 60px;
+    margin: 20px auto 0px auto;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigAnimatedBtn.active .searchBox {
+    transition: all 0.2s;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+
+.leftLine {
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.2s;
+    top: 0px;
+    left: 10px;
+}
+
+.leftLine.left {
+    transition: all 0.2s;
+    height: 60px;
+}
+
+.rightLine {
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.2s;
+    bottom: 0px;
+    right: 10px;
+}
+
+.rightLine.right {
+    transition: all 0.2s;
+    height: 60px;
+}
+
+.topLine {
+    position: absolute;
+    width: 95%;
+    height: 1px;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.2s;
+    top: 10px;
+    left: 0px;
+}
+
+.topLine.top {
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.bottomLine {
+    position: absolute;
+    width: 95%;
+    height: 1px;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.2s;
+    bottom: 10px;
+    right: 0px
+}
+
+.bottomLine.bottom {
+    transition: all 0.2s;
+    width: 100%;
+}
+
+/*  big animated btn  */
+
+
+/* ------------------- > button style */
+
+
+/* ---------------- >> text and boxes << */
+
+
+/* ------------------------------------ >> basic << */
+
+/* ------------------------------------ >> side bar << */
+
+
+/* ------------------------------------ >> side bar << */
+.sideBar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    z-index: 2;
+    animation: sidebarDown 0.4s ease forwards;
+}
+
+@keyframes sidebarDown {
+    from {
+        display: flex;
+        bottom: 0%;
+    }
+
+    to {
+        display: none;
+        bottom: -100%;
+    }
+}
+
+.sideBar.sidebar {
+    display: flex;
+    animation: sidebarUp 1s ease forwards;
+}
+
+@keyframes sidebarUp {
+    from {
+        display: none;
+        bottom: -100%;
+    }
+
+    to {
+        display: flex;
+        bottom: 0%;
+    }
+}
+
+.sidebarClose {
+    width: 100%;
+    height: 55%;
+}
+
+.sidebarContiner {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+}
+
+.sideBarBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+.MenuButton {
+    width: max-content;
+    height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: end;
+    margin: 5px 10px 5px 0px;
+}
+
+.menuButtonIcon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 60px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.IconMenuButton {
+    color: white;
+}
+
+.menuButtonBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 4px 16px;
+    margin-right: 10px;
+}
+
+.menuButtonBody span {
+    color: white;
+    font-size: 12px;
+}
+
+
+
+/* ------------------------------------ >> Header << */
+.headerContainer {
+    margin: 0px 60px;
+    padding: 15px 0px;
+}
+
+.moblieHeader {
+    display: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+}
+
+/* -------------------------- >> menu box << */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------- >> menu box << */
+
+/* -------------------------- >> logo box << */
+.logo {
+    width: 80px;
+    height: 45px;
+    background-image: url("../../../assets/image/bb-logo.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* -------------------------- >> logo box << */
+
+/* ------------------------------------ >> Header << */
+
+.homeConteiner {
+    margin-top: 100px;
+}
+
+/* ------------------------------------ >> search container << */
+.searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 10px;
+    height: 40px;
+    padding: 10px 20px 10px 10px;
+}
+
+.advancedSearch {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: relative;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.advancedSearch:active {
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.searchInput {
+    outline: none;
+    padding: 8px 15px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    direction: rtl;
+}
+
+.searchInput::placeholder {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: vazir;
+}
+
+.advancedSetting {
+    display: none;
+    justify-items: center;
+    position: absolute;
+    top: 50px;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.advancedSearch.active .advancedSetting {
+    display: grid;
+}
+
+.advancedSetting span {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 12px;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+
+.advancedSetting span:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+    transition: all 0.2s;
+}
+
+/* ------------------------------------ >> search container << */
+
+/* ------------------------------------ >> main container << */
+.mainContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 530px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* ------------------------ >  wathc frame < */
+.whathFrame {
+    display: none;
+    width: 100%;
+    height: 220px;
+}
+
+.watchContiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.centerContiner {
+    width: 60%;
+    height: 100%;
+}
+
+.watchScreen {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-color: #CCFF00;
+}
+
+.leftContainer {
+    position: relative;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftband {
+    position: absolute;
+    left: 0px;
+}
+
+.leftCircle {
+    position: absolute;
+    left: 0px;
+    width: 80%;
+}
+
+.rightContiner {
+    position: relative;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightCircle {
+    position: absolute;
+    right: 0px;
+    width: 80%;
+}
+
+.rightband {
+    position: absolute;
+    right: 0px;
+}
+
+
+/* ------------------------ >  wathc frame < */
+
+/* ------------------------ > phone container */
+.phoneContainer {
+    width: 280px;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+}
+
+.phoneBox {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 5px solid black;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    display: grid;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.splashScreen {
+    width: 100%;
+    height: 100%;
+    background-color: #CCFF00;
+    border-radius: inherit;
+    position: absolute;
+}
+
+.splashScreen.gtdownload {
+    animation: change 1s forwards;
+}
+
+@keyframes change {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.downloadScreen {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #CCFF00;
+    position: absolute;
+    z-index: -1;
+}
+
+.downloadScreen.animate {
+    animation: dwonload 1s forwards;
+}
+
+@keyframes dwonload {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(0.5);
+        z-index: 0;
+    }
+
+    85% {
+        opacity: 1;
+        transform: scale(0.5);
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 0;
+    }
+}
+
+/* ---------- > eye box < */
+
+.eyeBox {
+    position: absolute;
+    animation: eye 2s forwards;
+    width: 40px;
+    top: 35%;
+    left: 116px;
+    animation-timing-function: cubic-bezier(1, 0, 0.25, 1);
+}
+
+.corenaBox {
+    fill: rgb(224, 224, 224);
+    stroke: rgb(70, 70, 70);
+    stroke-width: 1.5px;
+}
+
+.backPupilBox {
+    fill: #00B2FF;
+}
+
+.pupilBox {
+    fill: #000000;
+}
+
+@keyframes eye {
+    0% {
+        top: 0%;
+        height: 0px;
+        opacity: 0;
+    }
+
+    92% {
+        top: 35%;
+        height: 40px;
+        opacity: 1;
+
+    }
+
+    95% {
+        top: 39%;
+        height: 0px;
+    }
+
+    100% {
+        height: 40px;
+    }
+}
+
+/* ---------- > eye box < */
+
+
+/* ---------- > text box < */
+.banibonBox {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+}
+
+.textBox {
+    display: flex;
+    align-self: flex-end;
+    align-items: end;
+    justify-content: center;
+    height: fit-content;
+    font-family: 'Combo';
+    font-weight: bold;
+}
+
+.comboText {
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.comboTextBig {
+    font-size: 64px;
+}
+
+/* ---------- > text box < */
+
+/* ---------- > linear indidcator < */
+
+.linearBox {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+}
+
+.linearIndicator {
+    display: flex;
+    margin: auto;
+}
+
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+    padding: 3px;
+    background-color: black;
+    border-radius: 30px;
+    margin: 0px 4px;
+    animation: scale 0.8s ease infinite;
+}
+
+
+.circle1 {
+    animation-delay: 1.6s;
+}
+
+.circle2 {
+    animation-delay: 1.65s;
+}
+
+.circle3 {
+    animation-delay: 1.7s;
+}
+
+.circle4 {
+    animation-delay: 1.75s;
+}
+
+.circle5 {
+    animation-delay: 1.8s;
+}
+
+.circle6 {
+    animation-delay: 1.9s;
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+/* ---------- > linear indidcator < */
+
+/* ---------- > status container < */
+.statusBox {
+    width: 100%;
+    position: absolute;
+    top: 98%;
+}
+
+.statusContainer {
+    width: 65px;
+    height: 5px;
+    border-radius: 30px;
+    background-color: black;
+    margin: 0px auto;
+}
+
+/* ---------- > status container < */
+
+/* ---------- > download title < */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 100%;
+}
+
+.title span {
+    font-family: vazirB;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.downloadbox {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #1122a5;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.26);
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    transform: scale(1);
+    cursor: pointer;
+    color: white;
+}
+
+.downloadbox:active {
+    transform: scale(0.95);
+    transition: all 0.2s;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+
+}
+
+.downloadbox i {
+    font-size: 90%;
+    color: white;
+}
+
+.downloadbox span {
+    font-size: 90%;
+}
+
+
+/* ---------- > download title < */
+
+/* ------------------------ > phone container */
+
+/* ------------------------ > text container */
+.textContainer {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+}
+
+.secoundDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cludContiner {
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+.whatisContiner {
+    width: max-content;
+    position: relative;
+}
+
+.whatis {
+    color: #ffcb05;
+    font-size: 30px;
+    font-family: vazirB;
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.cloud {
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carector {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+
+.navigatoToAU {
+    cursor: pointer;
+}
+
+.GTSButton {
+    position: absolute;
+    right: 0%;
+    bottom: 10%;
+}
+
+.shotcutGTS {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid white;
+    border-right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+.shotcutGTS span {
+    font-size: 16px;
+    color: white;
+}
+
+.GTSIcon {
+    margin-right: 15px;
+    font-size: 16px;
+    color: white;
+}
+
+.tellwhat {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.26);
+    padding: 12px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+}
+
+.arrowdown {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+/* ------------------------ > text container */
+
+/* ------------------------ > discount nav bar */
+.dicsountNavBar {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    height: 50px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    animation: livescroll 40s linear infinite;
+}
+
+.navbar2 {
+    display: flex;
+    width: 100%;
+    animation: livescroll 40s linear infinite;
+}
+
+@keyframes livescroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.discountBox {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    margin: 10px 10px;
+}
+
+.discountText {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#discountIcon {
+    margin-right: 10px;
+    color: #ffcb05;
+}
+
+.SdiscountNavBar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+/* ------------------------ > discount nav bar */
+
+/* ------------------------------------ >> main container << */
+
+/* ------------------------------------ >> store Content << */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+}
+
+/* -------------- > comments style */
+.commnetContainer {
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0));
+    box-shadow: -5px 0px 25px rgba(0, 0, 0, 0.5);
+    padding: 0px 5px 0px 15px;
+    overflow-y: hidden;
+}
+
+.commnets {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: end;
+    animation: livescrollY 90s linear infinite;
+}
+
+@keyframes livescrollY {
+    0% {
+        transform: translateY(-130%);
+    }
+
+    100% {
+        transform: translateY(140%);
+    }
+}
+
+/* > user comments style < */
+.userComment {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 10px;
+    background-color: white;
+    border-radius: 60px;
+    margin: 8px 0px;
+    border: 1px solid #1122A5;
+}
+
+.userImg {
+    width: 55px;
+    height: 55px;
+}
+
+.uComment {
+    font-size: 12px;
+    padding-left: 10px;
+    text-align: end;
+    color: rgba(0, 0, 0, 1);
+}
+
+/* > user comments style < */
+
+/* > admin comments style < */
+.adminComment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: max-content;
+    background-color: white;
+    border-radius: 60px;
+    margin: 10px 20px 10px 0px;
+    border: 3px solid #19BFD3;
+    box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.8);
+}
+
+.adminImg {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+}
+
+.aComment {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding-right: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* > admin comments style < */
+
+/* -------------- > comments style */
+
+/* -------------- > store style */
+.storeContainer {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.storeTitle {
+    display: flex;
+    align-items: end;
+    margin-top: 30px;
+}
+
+.storeText {
+    color: white;
+    font-size: 28px;
+    margin-left: 25px;
+}
+
+.storeText2 {
+    font-size: 38px;
+    color: #ffcb05;
+    font-family: vazirB;
+}
+
+
+.storeDiscription {
+    text-align: end;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.goToStore {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to left, rgba(255, 217, 0, 0.1), rgba(0, 47, 255, 0.1));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 30px 0px;
+    padding: 12px 16px;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.goToStore:active {
+    transition: all 0.2s;
+    transform: scale(0.95);
+    background-image: linear-gradient(to left, rgba(255, 217, 0, 0.3), rgba(0, 47, 255, 0.3));
+}
+
+.goToStore i {
+    margin-right: 10px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.goToStore span {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.shopScreen {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 3px solid #353535;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.26);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.lottie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.underConstraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 45%;
+    left: 58%;
+    transform: translate(-45%, -58%);
+}
+
+.underConstractionFrame {
+    width: 70%;
+    height: 35px;
+    position: relative;
+}
+
+.underConstractioncircle {
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    transform: translate(0%, -40%);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.line45deg {
+    position: absolute;
+    top: -4px;
+    left: 25%;
+    transform: rotate(35deg);
+    width: 2px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.line45deg2 {
+    position: absolute;
+    top: -4px;
+    left: 70%;
+    transform: rotate(-35deg);
+    width: 2px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.underConstractionBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+
+}
+
+.underConstractionBody span {
+    font-size: 14px;
+    color: white;
+}
+
+
+/* -------------- > store style */
+
+/* ------------------------------------ >> store Content << */
+
+/* ------------------------------------ >> about us <<  */
+.aboutUs {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.mainAboutUs {
+    width: 100%;
+    margin-bottom: 30px;
+    height: max-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallAboutUs {
+    display: none;
+}
+
+.fcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.discription {
+    text-align: end;
+    color: white;
+    font-size: 16px;
+}
+
+.establishedYear {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.sContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 200px;
+    height: 140px;
+}
+
+.line1, .line2 {
+    width: 160px;
+}
+
+
+.tContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.line3 {
+    width: 120px;
+    height: 120px;
+}
+
+.WhatIs {
+    font-size: 32px;
+    color: #ffcb05;
+    font-family: vazirB;
+}
+
+.AULogo {
+    width: 95px;
+    object-fit: fill;
+    margin-top: 15px;
+}
+
+.fContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 180px;
+    margin-left: 10px;
+}
+
+.line4 {
+    position: absolute;
+    top: 50%;
+}
+
+.SocialMeidaCotnainer {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+}
+
+.smBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 60px;
+    margin: 0px 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.smBox i {
+    font-size: 24px;
+    color: white;
+}
+
+.FiveContainer {
+    margin-left: 30px;
+}
+
+.PhoneNumberCotnainer {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.phoneNumberTitle {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.PhoneBox {
+    display: flex;
+    width: 170px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px 12px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.26);
+}
+
+.div {
+    color: white;
+    font-size: 20px;
+    font-family: vazirB;
+}
+
+.phoneNumberString {
+    font-size: 14px;
+    color: white;
+}
+
+.secoundBox {
+    width: 100%;
+    height: max-content;
+    margin-top: 80px;
+    position: relative;
+}
+
+.aboutUsMediaContainer {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 8px 16px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.aboutUsMediaContainer span {
+    font-size: 18px;
+    color: white;
+}
+
+.aboutUsMediaContainer i {
+    font-size: 18px;
+    color: white;
+    margin-right: 15px;
+}
+
+.sliderContainer {
+    width: 100%;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 10px 0px;
+}
+
+.slider {
+    overflow-y: scroll;
+    display: flex;
+    white-space: nowrap;
+}
+
+.sliderBox {
+    flex: 20% 0 0;
+    height: 155px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px;
+}
+
+.videoContainer {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+.imageCotnainer {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+
+.frameSlider {
+    display: flex;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.frameSlider2 {
+    display: flex;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.squre {
+    flex: 0 0 1%;
+    border-radius: 2px;
+    width: 10px;
+    margin: 0px 5px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.arrowDownConraeiner {
+    /* position: absolute;
+    top: 100px;
+    left: 50%; */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+/* ------------------------------------ >> about us <<  */
+
+/* ------------------------------------ >> fotter Content << */
+
+/* ------------ >> other service box  */
+.otherServiceContainer {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    padding: 35px 50px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: liveshadow 2s ease infinite;
+}
+
+@keyframes liveshadow {
+    0%, 100% {
+        box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.otherServiceContainer span {
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+}
+
+.smile {
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    z-index: 2;
+
+}
+
+/* ------------ >> other service box  */
+
+/* ------------ >> star line style  */
+.starContainer {
+    width: 100%;
+    height: max-content;
+    direction: rtl;
+}
+
+.starline {
+    width: 95%;
+}
+
+.starCanvas {
+    width: 0px;
+    height: 100px;
+}
+
+.starCanvas.starend {
+    opacity: 1;
+    animation: starEnd 0.1s ease forwards;
+}
+
+@keyframes starEnd {
+    from {
+        width: 100%;
+        opacity: 1;
+    }
+
+    to {
+        width: 0px;
+        opacity: 0;
+    }
+}
+
+.starCanvas.star {
+    animation: rise 0.2s ease-in-out forwards;
+}
+
+@keyframes rise {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* ------------ >> star line style  */
+
+/* ------------ >> footer style */
+
+.smallFooter {
+    display: none;
+    width: 200px;
+    height: 200px;
+
+}
+
+.footer {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+}
+
+/* ------- > icons container < */
+.iconsCotnainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 8%;
+    height: 100%;
+}
+
+.iconBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+    margin: 10px 0px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+}
+
+/* ------- > icons container < */
+
+/* ------- > main container < */
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.emailBox {
+    width: max-content;
+    padding: 12px 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.26);
+    border: 1px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    transform: translate(50%, 0%);
+}
+
+.emailTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 15px 0px;
+}
+
+.emailTitle span {
+    font-size: 14px;
+    text-align: end;
+    color: white;
+    font-weight: 500;
+}
+
+.emailTitle i {
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 10px 0px;
+}
+
+.emailSubmit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.emailInput {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+
+.emailInput[type="text"] {
+    font-family: vazir;
+    font-weight: 500;
+    color: white;
+}
+
+.emailInput::placeholder {
+    font-family: vazir;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.emailbtn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.emailbtn:active {
+    transition: all 0.2s;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(0.9);
+}
+
+.emailbtn span {
+    color: white;
+}
+
+.footerImg {
+    width: 50%;
+    object-fit: fill;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    transform: translate(50%, 0%);
+}
+
+/* ------- > main container < */
+
+/*-------- > information container style < */
+.informationContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: max-content;
+}
+
+.inforamtionBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.26);
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin: 5px 0px;
+    border: 1px solid white;
+}
+
+.informationText {
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.downloadSoftwaerImg {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    cursor: pointer;
+    padding: 6px;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.downloadSoftwaerImg:active {
+    transition: all 0.2s;
+    transform: scale(0.9);
+}
+
+.liecenseImg {
+    width: 75px;
+    height: 100px;
+    background-size: cover;
+}
+
+.copyRightText {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 15px;
+}
+
+/*-------- > information container style < */
+
+/* ----------------------------- >> floathing actions style */
+.floathingActionContainer {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    margin-right: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.scrollToTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 60px;
+    border: 1px solid white;
+    cursor: pointer;
+    animation: flash 2s ease infinite;
+    transform: scale(1);
+}
+
+@keyframes flash {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.7);
+    }
+
+    0% {
+        transform: scale(1);
+    }
+}
+
+.floathingButtonIcon {
+    font-size: 34px;
+    color: white;
+}
+
+/* ----------------------------- >> floathing actions style */
+
+/* ------------ >> footer style */
+
+/* ------------------------------------ >> fotter Content << */
+
+/* ------------------------------------ >> media query */
+/* ------------- > large media query */
+@media screen and (max-width: 1100px) {
+
+    /* perloader */
+    .preloaderText {
+        font-size: 28px;
+    }
+
+    .perloader img {
+        width: 110px;
+        height: 65px;
+    }
+
+    /* perloader */
+
+    .homeConteiner {
+        margin-top: 0px;
+    }
+
+    /* > first container */
+    .btn {
+        padding: 8px 12px;
+    }
+
+    .boldText {
+        font-size: 12px;
+    }
+
+    .normalText {
+        font-size: 12px;
+    }
+
+    .logo {
+        object-fit: fill;
+        width: 55px;
+        height: 30px;
+    }
+
+    .mainContent {
+        height: 450px;
+    }
+
+    .textContainer {
+        width: 50%;
+    }
+
+    .cludContiner {
+        right: 10%;
+        top: 20%;
+    }
+
+    .whatis {
+        font-size: 20px;
+    }
+
+    .cloud {
+        width: 180px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .carector {
+        width: 80px;
+    }
+
+    .tellwhat {
+        font-size: 16px;
+    }
+
+    .arrowdown {
+        width: 80px;
+    }
+
+    .phoneContainer {
+        width: 240px;
+    }
+
+    .downloadbox {
+        padding: 8px 14px;
+    }
+
+    .downloadbox span {
+        font-size: 80%;
+    }
+
+    .eyeBox {
+        left: 96px;
+    }
+
+    .content {
+        margin-top: 30px;
+    }
+
+    .h1 {
+        font-size: 24px;
+    }
+
+    /* > first container */
+    .storeTitle {
+        margin-top: 0px;
+    }
+
+    .storeText {
+        font-size: 22px;
+    }
+
+    .storeText2 {
+        font-size: 28px;
+        color: #ffcb05;
+    }
+
+    .storeDiscription {
+        font-size: 20px;
+    }
+
+    .goToStore {
+        padding: 10px 12px;
+    }
+
+    .goToStore span {
+        font-size: 14px;
+    }
+
+    .shopScreen {
+        width: 550px;
+        height: 350px;
+    }
+
+    .underConstraction {
+        left: 65%;
+    }
+
+    .underConstractionBody span {
+        font-size: 12px;
+    }
+
+    .commnetContainer {
+        width: 25%;
+    }
+
+    .userImg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .uComment {
+        font-size: 10px;
+    }
+
+    .otherServiceContainer {
+        padding: 25px 40px;
+    }
+
+    .otherServiceContainer span {
+        font-size: 20px;
+    }
+
+    .smile {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* > content container */
+
+    /* about us  */
+
+    .smallAboutUs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+    }
+
+    .imageAndDivider {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .imageAndDivider img {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -60%);
+    }
+
+    .threeLine {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 100px;
+    }
+
+    .verticalLine {
+        width: 100%;
+        height: 33%;
+        margin: 5px 0px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .discriptionCotnainer {
+        width: 50%;
+        margin: 15px 0px;
+        padding: 15px 20px;
+        background-color: rgba(0, 0, 0, 0.26);
+        box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: liveshadow 2s ease infinite;
+    }
+
+    .oneverticalLine {
+        width: 2px;
+        margin-bottom: 15px;
+        height: 30px;
+    }
+
+    .oneverticalLine div {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .lastThreLineContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        width: 100px;
+        height: max-content;
+    }
+
+    .lastThreLine1 {
+        transform: rotate(30deg);
+        width: 2px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+    }
+
+    .lastThreLine2 {
+        width: 2px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+    }
+
+    .lastThreLine3 {
+        transform: rotate(-30deg);
+        width: 2px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+    }
+
+    .mainAboutUs {
+        display: none;
+    }
+
+    .discription {
+        font-size: 14px;
+    }
+
+    .establishedYear {
+        font-size: 14px;
+    }
+
+    .line1, .line2 {
+        width: 120px;
+    }
+
+    .sContainer {
+        width: 140px;
+    }
+
+    .line3 {
+        width: 80px;
+    }
+
+    .AULogo {
+        width: 80px;
+    }
+
+    .WhatIs {
+        font-size: 22px;
+    }
+
+    .line4 {
+        width: 140px;
+    }
+
+    .SocialMeidaCotnainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .smBox {
+        padding: 8px;
+    }
+
+    .smBox i {
+        font-size: 18px;
+    }
+
+    .PhoneNumberCotnainer {
+        padding: 10px 15px
+    }
+
+    .phoneNumberTitle {
+        font-size: 14px;
+    }
+
+    .phoneNumberString {
+        font-size: 12px;
+    }
+
+    .sliderBox {
+        flex: 30% 0 0;
+    }
+
+    /* about us  */
+
+
+    /* > footer container */
+
+    .iconBox {
+        width: 50px;
+        height: 50px;
+    }
+
+    .emailTitle span {
+        font-size: 12px;
+    }
+
+    .emailbtn span {
+        font-size: 12px;
+    }
+
+    .informationText {
+        font-size: 12px;
+    }
+
+    /* > footer container */
+
+}
+
+/* ------------- > large media query */
+
+/* ------------- > tablet media query */
+@media screen and (max-width: 800px) {
+
+    .homeConteiner {
+        margin-top: 0px;
+    }
+
+    /* ------------ phone container */
+    .phoneContainer {
+        width: 200px;
+        height: 80%;
+    }
+
+    .phoneBox {
+        border-radius: 15px;
+    }
+
+    .downloadbox {
+        border-radius: 10px;
+    }
+
+    .title span {
+        font-size: 14px;
+    }
+
+    .banibonBox {
+        top: 42%;
+    }
+
+    .eyeBox {
+        width: 30px;
+        left: 81px;
+    }
+
+    .comboText {
+        padding-bottom: 2px;
+        font-size: 20px;
+    }
+
+    .comboTextBig {
+        margin: 0px 2px;
+        font-size: 26px;
+    }
+
+    /* ------------ phone container */
+
+    /* text continer */
+    .cludContiner {
+        right: 10%;
+    }
+
+    .carector {
+        width: 70px;
+    }
+
+    .tellwhat {
+        font-size: 14px;
+    }
+
+    /* text continer */
+
+    /* abou us slider box flex size  */
+    .imageAndDivider img {
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -65%);
+    }
+
+    .sliderBox {
+        flex: 35% 0 0;
+    }
+
+    /* abou us slider box flex size  */
+
+    /* other serive continer */
+    .otherServiceContainer {
+        padding: 15px;
+    }
+
+    .otherServiceContainer span {
+        font-size: 16px;
+
+    }
+
+    /* other serive continer */
+
+    /* footer  */
+    .footer {
+        justify-content: space-evenly;
+    }
+
+    .iconsCotnainer {
+        width: 12%;
+    }
+
+    .maincontainer {
+        display: none;
+    }
+
+    .emailBox {
+        top: 105%;
+        width: 100%;
+    }
+
+    .footerImg {
+        top: 180%;
+        left: -120px;
+    }
+
+    .informationContainer {
+        display: none;
+    }
+
+    .inforamtionBox {
+        width: 100%;
+    }
+
+    .smallFooter {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+
+
+    .floathingActionContainer {
+        display: none;
+    }
+
+    /* footer  */
+}
+
+/* ------------- > tablet media query */
+
+/* ------------- > mobile media query */
+@media screen and (max-width: 600px) {
+
+    /* perloader */
+    .preloaderText {
+        font-size: 22px;
+    }
+
+    .perloader img {
+        width: 85px;
+        height: 50px;
+    }
+
+    /* perloader */
+
+    .sideBar.sidebar {
+        display: flex;
+    }
+
+
+    /* heaer container */
+    .headerContainer {
+        margin: 0px 30px;
+        padding: 0px;
+    }
+
+    .header {
+        position: relative;
+        width: 100%;
+        height: 45px;
+    }
+
+    .moblieHeader {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        display: block;
+        width: 25px;
+        height: max-content;
+    }
+
+    .hambergerMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        position: relative;
+    }
+
+    .hambergerMenu.MenuOnClick .lineTop {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translate(0%, -50%);
+        transition: all 0.2s;
+        transform: rotate(45deg);
+    }
+
+    .hambergerMenu.MenuOnClick .lineBottom {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translate(0%, -50%);
+        transition: all 0.2s;
+        transform: rotate(-45deg);
+    }
+
+    .hambergerMenu.MenuOnClick .lineMiddle {
+        transition: all 0.1s;
+        width: 0px;
+    }
+
+
+    .lineTop, .lineMiddle, .lineBottom {
+        transition: all 0.2s;
+        width: 100%;
+        height: 2px;
+        margin: 2px 0px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .accountBox, .menu {
+        display: none;
+    }
+
+    .logo {
+        width: 45px;
+        height: 25px;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    .line {
+        margin-top: 0px;
+    }
+
+    /* heaer container */
+
+
+    /* home content */
+
+    .homeConteiner {
+        margin-top: 0px;
+    }
+
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        height: 650px;
+    }
+
+    .phoneContainer {
+        display: none;
+    }
+
+    .textContainer {
+        width: 100%;
+        right: 0%;
+    }
+
+    .whatis {
+        font-size: 16px;
+    }
+
+    .cludContiner {
+        right: 5%;
+        top: 8%;
+    }
+
+
+    .cloud {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .carector {
+        width: 60px;
+        top: 15%;
+        right: 5%;
+    }
+
+    .arrowdown {
+        left: -10px;
+        top: 25%;
+        transform: rotate(-90deg);
+    }
+
+    .tellwhat {
+        bottom: 55%;
+        left: 25%;
+    }
+
+    .whathFrame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0%;
+    }
+
+    .eyeBox {
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .banibonBox {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .linearBox {
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    @keyframes eye {
+        0% {
+            top: 0%;
+            height: 0px;
+            opacity: 0;
+        }
+
+        92% {
+            top: 25%;
+            height: 40px;
+            opacity: 1;
+
+        }
+
+        95% {
+            top: 35%;
+            height: 0px;
+        }
+
+        100% {
+            height: 40px;
+        }
+    }
+
+    .GTSButton {
+        right: 0px;
+        bottom: 40%;
+    }
+
+    .shotcutGTS span {
+        font-size: 12px;
+    }
+
+    .GTSIcon {
+        font-size: 12px;
+    }
+
+    .discountText {
+        font-size: 16px;
+    }
+
+
+    /* home content */
+
+    /* secound content */
+    .storeText2 {
+        font-size: 22px;
+    }
+
+    .storeText {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .storeDiscription {
+        font-size: 12px;
+    }
+
+    .shopScreen {
+        width: 100%;
+    }
+
+    .underConstraction {
+        top: 35%;
+        left: 70%;
+    }
+
+
+    /* secound content */
+
+    /* abou us slider box flex size  */
+    .sliderBox {
+        flex: 75% 0 0;
+    }
+
+    /* abou us slider box flex size  */
+}
+
+
+/* ------------- > mobile media query */
+
+/* ------------------------------------ >> media query */

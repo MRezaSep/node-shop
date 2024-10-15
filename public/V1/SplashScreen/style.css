@@ -1,0 +1,189 @@
+/* ------------------------------ >> default */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* ------------------------------ >> default */
+
+/* ------------------------------ >> font face */
+@font-face {
+    font-family: vazir;
+    src: url('./../../../assets/fonts/Vazir.ttf');
+}
+
+@font-face {
+    font-family: vazirB;
+    src: url('./../../../assets/fonts/Vazir-Bold.ttf');
+}
+
+/* ------------------------------ >> font face */
+
+
+/* ----------------------------- >> peorloader style */
+.perloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    width: 100%;
+    height: 100%;
+    background-color: #CCFF00;
+    position: fixed;
+    z-index: 10;
+}
+
+/* >> main Continer */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banibonContiner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* >> main Continer */
+
+/* >> eye styles */
+.eyeBox {
+    width: 45px;
+    margin-left: 2px;
+}
+
+.backPupilBox {
+    fill: #00B2FF;
+}
+
+.pupilBox {
+    fill: #000000;
+}
+
+/* eye styles << */
+
+/* >> banibon text */
+.textBox {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Combo';
+    font-weight: bold;
+}
+
+.comboText {
+    font-size: 45px;
+}
+
+.comboTextBig {
+    font-size: 64px;
+    padding-bottom: 10px;
+}
+
+/* banibon text << */
+
+/* >> linear indicators */
+.linearIndicator {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    display: flex;
+
+}
+
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+    padding: 3px;
+    background-color: black;
+    border-radius: 30px;
+    margin: 0px 4px;
+    animation: scale 0.8s ease 0.2s infinite;
+}
+
+
+.circle1 {
+    animation-delay: 0.0s;
+}
+
+.circle2 {
+    animation-delay: 0.1s;
+}
+
+.circle3 {
+    animation-delay: 0.2s;
+}
+
+.circle4 {
+    animation-delay: 0.3s;
+}
+
+.circle5 {
+    animation-delay: 0.4s;
+}
+
+.circle6 {
+    animation-delay: 0.5s;
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+
+/* >> linear indicators */
+
+
+/* ----------------------------- >> peorloader style */
+
+/* ----------------------------- <<‌ media query << */
+@media screen and (min-width:2560px) {
+
+    .eyeBox {
+        width: 65px;
+        margin-left: 2px;
+    }
+
+    .comboText {
+        font-size: 65px;
+    }
+
+    .comboTextBig {
+        font-size: 84px;
+        padding-bottom: 10px;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+        padding: 8px;
+        margin: 0px 8px;
+    }
+}
+
+/* ----------------------------- <<‌ media query << */
